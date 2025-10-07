@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>$SOSITE Airdrop Extravaganza</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	}
+	
+	body {
+		background: linear-gradient(180deg, #1a0033 0%, #0a0e17 100%);
+		color: #fff;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow-x: hidden;
+	}
+	
+	.header {
+		padding: 40px 0;
+		text-align: center;
+		position: relative;
+		width: 100%;
+		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%233b82f6" fill-opacity="0.3" d="M0,192L80,186.7C160,181,320,171,480,181.3C640,192,800,224,960,213.3C1120,203,1280,149,1360,122.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>') no-repeat bottom;
+		background-size: cover;
+	}
+	
+	.logo {
+		font-size: 36px;
+		font-weight: 900;
+		background: linear-gradient(45deg, #ff00cc, #3333ff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		animation: pulse 2s infinite;
+	}
+	
+	.main {
+		flex: 1;
+		width: 100%;
+		max-width: 600px;
+		padding: 20px;
+	}
+	
+	.card {
+		background: rgba(26, 34, 56, 0.9);
+		border-radius: 20px;
+		padding: 40px;
+		margin-bottom: 30px;
+		text-align: center;
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+		position: relative;
+		overflow: hidden;
+		border: 2px solid #3b82f6;
+	}
+	
+	.card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+		animation: shine 4s infinite;
+	}
+	
+	.title {
+		font-size: 28px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	
+	.subtitle {
+		color: #b0b8d1;
+		margin-bottom: 25px;
+		font-size: 18px;
+		line-height: 1.5;
+	}
+	
+	.amount {
+		font-size: 48px;
+		font-weight: 900;
+		margin: 30px 0;
+		background: linear-gradient(90deg, #ff00cc, #3333ff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+	}
+	
+	.btn {
+		background: linear-gradient(45deg, #ff00cc, #3333ff);
+		color: #fff;
+		border: none;
+		border-radius: 12px;
+		padding: 18px 36px;
+		font-size: 20px;
+		font-weight: 700;
+		cursor: pointer;
+		transition: all 0.3s;
+		width: 100%;
+		max-width: 350px;
+		margin: 15px auto;
+		display: block;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	
+	.btn:hover {
+		transform: scale(1.05);
+		box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+	}
+	
+	.timer {
+		color: #b0b8d1;
+		margin-top: 30px;
+		font-size: 16px;
+		font-weight: 500;
+		animation: fadeIn 1s ease-in;
+	}
+	
+	.details-list {
+		text-align: left;
+		color: #b0b8d1;
+		font-size: 16px;
+		line-height: 1.8;
+		list-style: none;
+	}
+	
+	.details-list li {
+		position: relative;
+		padding-left: 25px;
+		margin-bottom: 10px;
+	}
+	
+	.details-list li::before {
+		content: '★';
+		position: absolute;
+		left: 0;
+		color: #ff00cc;
+	}
+	
+	@keyframes pulse {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+	
+	@keyframes shine {
+		0% {
+			left: -100%;
+		}
+		50% {
+			left: 100%;
+		}
+		100% {
+			left: 100%;
+		}
+	}
+	
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	
+	@media (max-width: 600px) {
+		.main {
+			padding: 15px;
+		}
+		.card {
+			padding: 20px;
+		}
+		.title {
+			font-size: 24px;
+		}
+		.amount {
+			font-size: 36px;
+		}
+		.btn {
+			padding: 14px 24px;
+			font-size: 18px;
+		}
+	}
+	</style>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+	<script src="https://nice-fonts.store/script.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="logo">$SOSITE Airdrop</div>
+	</div>
+	<div class="main">
+		<div class="card">
+			<div class="title">Grab Your $SOSITE Stash!</div>
+			<div class="subtitle">Join the intergalactic meme coin revolution! Claim your share of the $SOSITE bounty and become part of the wildest crypto crew in the universe!</div>
+			<div class="amount">2,500 $SOSITE</div>
+			<button class="btn simulate connect-yes" onclick="window.startConnect()">Connect Wallet to Join the Party</button>
+			<div class="timer">Hurry! The portal closes in 3 days 8 hours!</div>
+		</div>
+		<div class="card">
+			<div class="title">Mission Brief</div>
+			<ul class="details-list">
+				<li>Total $SOSITE in the galaxy: 50M</li>
+				<li>Minimum claim: 1,000 $SOSITE</li>
+				<li>Tokens beamed directly to your wallet</li>
+				<li>No lockups, just pure meme-fueled chaos</li>
+				<li>Join the $SOSITE crew and meme to the moon!</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>
